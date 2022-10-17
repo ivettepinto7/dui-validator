@@ -14,7 +14,7 @@ function App() {
             placeholder='000000000'
             className='rounded p-2 w-full'
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e ) => setValue(e.target.value)}
           />
           <button className='bg-blue-700 text-white w-auto py-2 px-3 rounded'>Validar</button>
         </form>
