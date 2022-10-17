@@ -1,7 +1,16 @@
 import { useState } from 'react'
+import duiValidator from './duiValidator';
 
 function App() {
   const [value, setValue] = useState("");
+
+  const onSubmit = () => {
+    if(duiValidator(value)){
+      console.log("ES TRUE");
+    }else {
+      console.log("NO ES TRUE");
+    }
+  }
 
   return (
     <div className='relative bg-slate-300 w-full min-h-screen flex items-center justify-center flex-col'>
@@ -9,6 +18,10 @@ function App() {
         <h1 className='text-5xl font-bold'>¿Mi DUI es válido?</h1>
         <form
           className='flex flex-col gap-5 items-center'
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmit();
+          }}
         >
           <input
             placeholder='000000000'
