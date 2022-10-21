@@ -1,4 +1,4 @@
-import { render, waitFor , screen, getRoles } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { describe, it } from 'vitest';
 import userEvent from '@testing-library/user-event';
 import App from './App';
